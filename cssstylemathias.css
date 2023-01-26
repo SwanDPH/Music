@@ -1,0 +1,237 @@
+*{
+    scroll-behavior: smooth;
+}
+
+html{
+    background-color: #161616;
+    width: 100%;
+
+    height: 100%;
+}
+body { margin: 0; }
+
+
+.nav-tabs{
+    background: rgb(51,51,51);
+    background: radial-gradient(circle, rgb(37, 26, 26) 1%, rgb(6, 5, 5) 99%);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.nav-tabs a{
+    color: whitesmoke;
+}
+
+.nav-link:hover{
+    color:#ffda2a;
+}
+
+
+p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #f2f2f2;
+    transition: all 0.2s;
+}
+
+
+
+audio{
+    display: none;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.firstSection{
+    height: 100%;
+    width: 100%;
+    background-image: url(Images/Image_1accueil.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.texteAccueil{
+    margin-bottom: 100px;
+}
+.texteAccueil P{
+    font-size: 105px;
+    font-family: 'EastBorder';
+}
+
+
+A{
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+
+@font-face {
+    font-family: "EastBorder";
+    src: url(Polices/EastBorder.ttf) format("truetype");
+  }
+
+#logoBadRecords{
+    width: 4.5%;
+    margin-left: 35px;
+    margin-right: 12px;
+}
+
+.buttonZone :nth-child(2) {
+    margin-left: 60px;
+	background:linear-gradient(to bottom, #171406 5%, #020200 100%);
+	border-radius:50px; 
+	font-size:15px;
+	font-weight:bold;
+	color: #ffda2a;
+	text-shadow:0px 1px 0px #171406;
+  }
+
+  .buttonZone :nth-child(2):hover {
+	background:linear-gradient(to bottom, #020200 100%, #171406 5%);
+	color: #ffda2a;
+	text-shadow:0px 1px 0px #171406;
+  }
+
+Button {
+    width: 210px;
+    height: 80px;
+	box-shadow:inset 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffda2a 5%, #dbb91a 100%);
+	border-radius:50px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+Button:hover {
+	background:linear-gradient(to bottom, #dbb91a 5%, #ffda2a 100%);
+}
+Button:active {
+	position:relative;
+	top:1px;
+}
+
+
+/* Section liste des musiques */
+
+.ligneMusique{
+    background: linear-gradient(77deg, rgba(22,22,22,1) 1%, rgba(28,27,27,1) 47%, rgb(23, 21, 21) 73%, rgba(22,19,19,1) 97%);
+    height: 25%;
+    width: 100%;
+}
+
+.ligneMusique button{
+    border-radius: 20px;
+    width: 70px;
+    height: 70px;
+}
+
+#playButton1{
+    width: 60px;
+    height: 60px;
+}
+#playButton1:hover{
+   cursor: pointer;
+}
+
+
+#titreMusique{
+    padding-top: 5px;
+    font-size: 31px;
+}
+
+#titreMusique>em{
+    font-size: 18px;
+    color: #aaa9a9;
+}
+
+
+.genre{
+    font-size: 18px;
+    color: #aaa9a9;
+    vertical-align: top;
+}
+.genre1{
+}
+
+.time{
+    font-size: 18px;
+    color: #aaa9a9;
+}
+
+.iconeplay>img{
+    width: 50px;
+    height: 50px;
+}
+
+#listeMusique{
+    display: none;
+}
+
+.css-button {
+	color: #f8ecec;
+	font-size: 28px;
+	border-radius: 63px;
+	border: solid 0px #3866a3;
+	box-shadow: inset 1px 1px 0px 0px #4c441c;
+	text-decoration: none;
+	cursor: pointer;
+	position: relative;
+	font-family: 'ABeeZee', sans-serif;
+	background: linear-gradient(to bottom, #dbb91a 5%, #ffda2a 100%);
+	display: inline-flex;
+	align-items: center;
+	padding: 0;
+}
+.css-button:hover {
+	background: linear-gradient(180deg, #e2c42b 100%, #dbb91a 5%);
+}
+
+.css-button-icon {
+    color: red;
+	box-shadow: inset rgb(0 0 0 / 14%) -1px 0 0;
+	padding: 12px 10px;
+}
+
+
+.iconeLike>img{
+    display: inside;
+    flex-direction: column;
+    width: 20px;
+    height: 20px;
+}
+.iconeFavoris>img{
+    display:flex;
+    flex-direction: column;
+    width: 20px;
+    height: 20px;
+}
+
+.actionMusique{
+    display: flex;
+    flex-direction: row;
+    width: 14%;
+    height: 65%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.titreMusique{
+    font-size: large;
+}
+.boutonDeRetrait{
+    border-radius: 0%;
+    opacity: 0.7;
+    width: 100%;
+    height: 30px;
+    margin-top: 1px;
+    margin-bottom: 8px;
+    background:linear-gradient(to bottom, #dbb91a 5%, #ffda2a 100%);
+}

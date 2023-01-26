@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>Welcome !</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="cssstylemathias.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<!-- <nav>
+<img id="logoBadRecords" src="Images/BadRecords.png" alt="">
+<p class="navText"><a href="#">Recherche</a></p>
+<p class="navText"><a href="#listeMusique" onclick="musiqueList()">Instrumental</a></p>
+<p class="navText"><a href="#">Vidéos/Images</a></p>
+<p class="navText"><a href="#">Cours apprentissagem</a></p>
+</nav> -->
+
+<!-- NavBar -->
+<ul style="border:0px" class="nav nav-tabs">
+        <img id="logoBadRecords" src="Images/BadRecords.png" alt="">
+
+    <li class="nav-item">
+      <a class="nav-link" onclick="musiqueList()" href="#listeMusique">Instrumental</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="#">Vidéoos/Images</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="#">Matériels</a>
+    </li>
+
+  </ul>
+  <!-- Fin de NavBar -->
+
+    <div class="col firstSection">
+            <div class="col texteAccueil">
+                <p>MR.BAAD <br>INDUSTRIE</br></p>
+            </div>
+
+            <div class="col">
+                    <div class="col buttonZone">
+                        <button style="border: 0px" type="button" class="btn btn-primary btn-lg">Découvre nos instrus</button>
+                        <button type="button" class="btn btn-primary btn-lg">& nos vidéos</button>
+                            
+                    </div>
+            </div>
+    </div>
+
+
+<!-- Section liste des musiques -->
+
+
+<table class="table ligneMusique">
+    <tr class="d-flex align-items-center">
+      <th scope="row"><img src="Images/Cover/Musique1.png" alt=""></th>
+      <td style="padding: 30px; border:0px"><img id="playButton1" src="Images/Icone/play.png" onclick="buttonPlayFunc()" alt=""></td>
+      <td style="padding: 30px; border:0px"><p id="titreMusique">okMusic.titre}<em id="artisteMusique"><br>okMusic.artiste}</em></p></td>
+      <td style="padding: 30px; border:0px" class="genre1"><p class="genre">okMusic.genre}</p></td>
+      <td style="padding: 30px; border:0px"><p class="time">okMusic.temps}</p></td>
+      <td style="padding: 30px; border:0px"><p class="time">okMusic.favorite}</td>
+
+      <td style="padding: 30px; border:0px">
+            <span class="css-button-icon">
+                <i class="fa fa-cart-arrow-down"></i>
+            </span>
+
+      <td style="padding: 30px; border:0px">
+            <span class="css-button-icon">
+                <i class="fa fa-download"></i>
+            </span>
+            
+      <td style="padding: 30px; border:0px">
+            <span class="css-button-icon">
+                <i class="fa fa-download"></i>
+            </span>
+      
+    </tr>
+    
+    </tr>
+</table>
+
+<section id="listeMusique">
+    <div id="IDElementHtmlTest"></div>
+</section>
+
+</body>
+
+
+<footer>
+
+</footer>
+
+<script src="structureEtObjet.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</html>
