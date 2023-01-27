@@ -62,7 +62,6 @@ function musiqueList(){
                                 <td style="padding: 30px; border:0px"><p id="titreMusique">${Music.titre}<em id="artisteMusique"><br>${Music.artiste}</em></p></td>
                                 <td style="padding: 30px; border:0px"><p class="genre">${Music.genre}</p></td>
                                 <td style="padding: 30px; border:0px"><p class="time">${Music.temps}</p></td>
-                                <td style="padding: 30px; border:0px"><p class="favorite">${Music.favorite}</td>
 
                                 <td style="padding: 30px; border:0px">
                                     <span class="css-button-icon">
@@ -74,13 +73,6 @@ function musiqueList(){
                                 <td style="padding: 30px; border:0px">
                                     <span class="css-button-icon">
                                         <i  class="fa fa-download" style="font-size:30px;" onMouseOver="$(this).css('color', '#b6afaf');" onmouseout="$(this).css('color', '#e0dede');" ondblclick="$(this).css('color', '#6efc7b');"></i>
-                                    </span>
-                                </td>
-
-
-                                <td style="padding: 30px; border:0px">
-                                    <span class="css-button-icon">
-                                        <i class="fa fa-download" style="font-size:30px" onMouseOver="$(this).css('color', '#b6afaf');" onmouseout="$(this).css('color', '#e0dede');" ondblclick="$(this).css('color', '#6efc7b');"></i>
                                     </span>
                                 </td>
                                     
