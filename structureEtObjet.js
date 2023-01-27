@@ -1,7 +1,23 @@
     var click = false;
     var favoriteMusiquee = false;
+    var purchase = false;
     let ListOfMusic = '';
+    const media1 = window.matchMedia("(max-width: 1000px)");
+    const media2 = window.matchMedia("(max-min: 1000px)");
+    const titre = document.querySelector("p");
     
+
+        // gestion du responsive en JS
+// window.onload = function(){
+//     if(media1.matches){
+//         titre.style.color = "green";
+//     } 
+//     else (media2.matches) {
+//         titre.style.color = "yellow";
+//     }
+// }
+
+
     // création de la structure "musique" (le squelette des objets)
 function musique (titre, artiste, annee, genre, temps, cover, mp3, favorite, purchase){
     this.titre = titre
@@ -37,11 +53,10 @@ musiquesTableau.push(musique1, musique2, musique3,musique4, musique5, musique6, 
 function musiqueList(){
     click = true;
     musiquesTableau.forEach(Music =>
-        
         ListOfMusic +=
-        `<section >
-                    <table class="table ligneMusique">
-                            <tr class="d-flex align-items-center">
+        `<section>
+                    <table class="table">
+                            <tr class="d-flex align-items-center ligneMusique">
                                 <th scope="row" style="padding: 30px; border:0px"><img src="${Music.cover}" alt=""></th>
                                 <td style="padding: 30px; border:0px"><img id="playButton1" src="Images/Icone/play.png" onclick="buttonPlayFunc()" alt=""></td>
                                 <td style="padding: 30px; border:0px"><p id="titreMusique">${Music.titre}<em id="artisteMusique"><br>${Music.artiste}</em></p></td>
@@ -78,26 +93,33 @@ function musiqueList(){
 }
 
 function isFavorite(){
-    let bouttonFavori = document.getElementsByClassName("favorite");
     var favoriteMusiquee = true;
-    let musiqueListe = ListOfMusic;
     musiquesTableau.forEach(Music =>{
         Music.favorite = true;
-        if (Music.favorite == true) {
-                musiquesFavoriteTableau.push(Music.titre);
-                console.log("favoriteTrue");
-                console.log(musiquesFavoriteTableau);
-        } else {
-                console.log("favoriteFalse");
-        }
+        if (Music.favorite == true)
+                    {
+                            musiquesFavoriteTableau.push(Music.titre);
+                            console.log("favoriteTrue");
+                            console.log(musiquesFavoriteTableau);
+                    }
+        else
+                    {
+                            console.log("favoriteFalse");
+                    }
     }
     
     )
-    
-
     document.getElementById('IDElementHtmlTest').innerHTML = ListOfMusic
     document.getElementById("listeMusique").style.display = "block";
 } 
+
+function isNoFavorite(){
+    var favoriteMusiquee = false;
+    console.log(favoriteMusiquee);
+}
+
+
+
 
 // var ecranLargeur = window.innerWidth
 // var ecranLongueur = window.innerHeight

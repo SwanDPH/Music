@@ -52,6 +52,7 @@ audio{
 .texteAccueil{
     margin-bottom: 100px;
 }
+
 .texteAccueil P{
     font-size: 105px;
     font-family: 'EastBorder';
@@ -124,10 +125,13 @@ Button:active {
 
 .ligneMusique{
     background: linear-gradient(77deg, rgba(22,22,22,1) 1%, rgba(28,27,27,1) 47%, rgb(23, 21, 21) 73%, rgba(22,19,19,1) 97%);
+    display: flex;
+    flex-direction: row;
     border-top: #333333 0.01em solid;
     height: 25%;
     width: 100%;
-    background-color: red;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .ligneMusique button{
@@ -143,6 +147,8 @@ Button:active {
 }
 #playButton1:hover{
    cursor: pointer;
+   width: 55px;
+    height: 55px;
 }
 
 
@@ -239,3 +245,106 @@ Button:active {
     margin-bottom: 8px;
     background:linear-gradient(to bottom, #dbb91a 5%, #ffda2a 100%);
 }
+
+
+/* Responsive pour navigateur PC */
+@media screen and (max-width: 600px) {
+    .buttonZone{
+        width: 20px;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .buttonZone :nth-child(2) {
+        background:linear-gradient(to bottom, #171406 5%, #020200 100%);
+        margin-left: 0px;
+        border-radius:50px; 
+        font-size:15px;
+        font-weight:bold;
+        color: #ffda2a;
+        text-shadow:0px 1px 0px #171406;
+      }
+
+    .texteAccueil{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .firstSection{
+        height: 100%;
+        width: 100%;
+        background-image: url(Images/Image_1accueil.png);
+        background-position: -185px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .logoBadRecords{
+        display: none;
+    }
+}
+
+/* RESPONSIVE Pour téléphone */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .buttonZone{
+        width: 20px;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .buttonZone :nth-child(1){
+        width: 500px;
+        height: 300px;
+        font-size:55px;
+    }
+
+    .buttonZone :nth-child(2) {
+        background:linear-gradient(to bottom, #171406 5%, #020200 100%);
+        margin-left: 0px;
+        width: 500px;
+        height: 300px;
+        font-size:55px;
+        border-radius:50px; 
+        font-weight:bold;
+        color: #ffda2a;
+        text-shadow:0px 1px 0px #171406;
+      }
+
+    .texteAccueil{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .texteAccueil P{
+        margin-top: 100px;
+        font-size: 200px;
+        justify-items: center;
+        font-style: normal;
+    }
+
+    .firstSection{
+        height: 100%;
+        width: 100%;
+        background-image: url(Images/Image_1accueil.png);
+        background-position: -185px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .logoBadRecords{
+        display: none;
+    }
+.playButton1{
+    border:solid 5px red;
+}
+
+    }
