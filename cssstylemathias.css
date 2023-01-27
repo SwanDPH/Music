@@ -32,8 +32,6 @@ p{
     transition: all 0.2s;
 }
 
-
-
 audio{
     display: none;
 }
@@ -120,11 +118,16 @@ Button:active {
 
 
 /* Section liste des musiques */
+#IDElementHtmlTest{
+    background: linear-gradient(77deg, rgba(22,22,22,1) 1%, rgba(28,27,27,1) 47%, rgb(23, 21, 21) 73%, rgba(22,19,19,1) 97%);
+}
 
 .ligneMusique{
     background: linear-gradient(77deg, rgba(22,22,22,1) 1%, rgba(28,27,27,1) 47%, rgb(23, 21, 21) 73%, rgba(22,19,19,1) 97%);
+    border-top: #333333 0.01em solid;
     height: 25%;
     width: 100%;
+    background-color: red;
 }
 
 .ligneMusique button{
@@ -132,6 +135,7 @@ Button:active {
     width: 70px;
     height: 70px;
 }
+
 
 #playButton1{
     width: 60px;
@@ -195,7 +199,7 @@ Button:active {
 }
 
 .css-button-icon {
-    color: red;
+    color: #f2f2f2;
 	box-shadow: inset rgb(0 0 0 / 14%) -1px 0 0;
 	padding: 12px 10px;
 }

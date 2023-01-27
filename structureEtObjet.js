@@ -39,42 +39,40 @@ function musiqueList(){
     musiquesTableau.forEach(Music =>
         
         ListOfMusic +=
-        `
-        <table class="table ligneMusique">
-                <tr class="d-flex align-items-center">
-                    <th scope="row" style="padding: 30px; border:0px"><img src="${Music.cover}" alt=""></th>
-                    <td style="padding: 30px; border:0px">
-                                <button class="iconeplay">
-                                <img id="playButton1" src="Images/Icone/play.png" onclick="buttonPlayFunc()" alt="">
-                                </button>
-                    </td>
-                    <td style="padding: 30px; border:0px"><p id="titreMusique">${Music.titre}<em id="artisteMusique"><br>${Music.artiste}</em></p></td>
-                    <td style="padding: 30px; border:0px"><p class="genre">${Music.genre}</p></td>
-                    <td style="padding: 30px; border:0px"><p class="time">${Music.temps}</p></td>
-                    <td style="padding: 30px; border:0px"><p class="favorite">${Music.favorite}</td>
+        `<section >
+                    <table class="table ligneMusique">
+                            <tr class="d-flex align-items-center">
+                                <th scope="row" style="padding: 30px; border:0px"><img src="${Music.cover}" alt=""></th>
+                                <td style="padding: 30px; border:0px"><img id="playButton1" src="Images/Icone/play.png" onclick="buttonPlayFunc()" alt=""></td>
+                                <td style="padding: 30px; border:0px"><p id="titreMusique">${Music.titre}<em id="artisteMusique"><br>${Music.artiste}</em></p></td>
+                                <td style="padding: 30px; border:0px"><p class="genre">${Music.genre}</p></td>
+                                <td style="padding: 30px; border:0px"><p class="time">${Music.temps}</p></td>
+                                <td style="padding: 30px; border:0px"><p class="favorite">${Music.favorite}</td>
 
-                    <td style="padding: 30px; border:0px"><button type="button" class="css-button">
-                    <span class="css-button-icon">
-                    <i class="fa fa-cart-arrow-down"></i>
-                    </span>
-                    </button></td>
+                                <td style="padding: 30px; border:0px">
+                                    <span class="css-button-icon">
+                                        <i class="fa fa-cart-arrow-down" style="font-size:30px" onMouseOver="$(this).css('color', '#b6afaf');" onmouseout="$(this).css('color', '#e0dede');" ondblclick="$(this).css('color', '#6efc7b');"></i>
+                                    </span>
+                                </td>
 
 
-                    <td style="padding: 30px; border:0px"><button type="button" class="css-button">
-                        <span class="css-button-icon">
-                            <i class="fa fa-download"></i>
-                        </span>
-                    </button></td>
+                                <td style="padding: 30px; border:0px">
+                                    <span class="css-button-icon">
+                                        <i  class="fa fa-download" style="font-size:30px;" onMouseOver="$(this).css('color', '#b6afaf');" onmouseout="$(this).css('color', '#e0dede');" ondblclick="$(this).css('color', '#6efc7b');"></i>
+                                    </span>
+                                </td>
 
 
-                    <td style="padding: 30px; border:0px"><button type="button" class="css-button favorite">
-                                                <span class="css-button-icon">
-                                                    <i class="fa fa-plus" onclick="isFavorite()"></i>
-                                                </span>
-                                        </button></td>
-                        
-                        </tr>
-    </table>`)
+                                <td style="padding: 30px; border:0px">
+                                    <span class="css-button-icon">
+                                        <i class="fa fa-download" style="font-size:30px" onMouseOver="$(this).css('color', '#b6afaf');" onmouseout="$(this).css('color', '#e0dede');" ondblclick="$(this).css('color', '#6efc7b');"></i>
+                                    </span>
+                                </td>
+                                    
+                                    </tr>
+                </table>
+        </section>`
+                )
     document.getElementById('IDElementHtmlTest').innerHTML = ListOfMusic
     document.getElementById("listeMusique").style.display = "block";
 }
