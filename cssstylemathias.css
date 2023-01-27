@@ -81,6 +81,10 @@ A{
     margin-left: 15px;
 }
 
+button a{
+    text-decoration: none;
+}
+
 .buttonZone :nth-child(2) {
     margin-left: 60px;
 	background:linear-gradient(to bottom, #171406 5%, #020200 100%);
