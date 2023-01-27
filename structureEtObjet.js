@@ -7,7 +7,7 @@
     const titre = document.querySelector("p");
     
 
-        // gestion du responsive en JS
+//         // gestion du responsive en JS
 // window.onload = function(){
 //     if(media1.matches){
 //         titre.style.color = "green";

@@ -20,9 +20,12 @@
 </nav> -->
 
 <!-- NavBar -->
-<ul style="border:0px" class="nav nav-tabs">
+<ul style="border:0px" class="nav nav-tabs" style="flex-wrap: nowrap;">
+  <div class="logo">
         <img id="logoBadRecords" src="Images/BadRecords.png" alt="">
+  </div>
 
+  <div class="cacheItem">
     <li class="nav-item">
       <a class="nav-link" onclick="musiqueList()" href="#listeMusique">Instrumental</a>
     </li>
@@ -34,18 +37,23 @@
     <li class="nav-item">
       <a class="nav-link" href="#">Matériels</a>
     </li>
-
+  </div>
   </ul>
   <!-- Fin de NavBar -->
 
+  
+
+
+
     <div class="col firstSection">
+
             <div class="col texteAccueil">
                 <p>MR.BAAD <br>INDUSTRIE</br></p>
             </div>
 
             <div class="col">
                     <div class="col buttonZone">
-                        <button style="border-radius: 50px" type="button">Découvre nos instrus</button>
+                        <button style="border-radius: 50px" type="button" onclick="musiqueList()">Découvre nos instrus</button>
                         <button type="button">& nos vidéos</button>
                             
                     </div>

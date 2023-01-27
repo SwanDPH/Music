@@ -10,6 +10,12 @@ html{
 }
 body { margin: 0; }
 
+.cacheItem{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: flex-end;
+}
 
 .nav-tabs{
     background: rgb(51,51,51);
@@ -71,9 +77,8 @@ A{
   }
 
 #logoBadRecords{
-    width: 4.5%;
-    margin-left: 35px;
-    margin-right: 12px;
+    width: 80px;
+    margin-left: 15px;
 }
 
 .buttonZone :nth-child(2) {
@@ -246,9 +251,36 @@ Button:active {
     background:linear-gradient(to bottom, #dbb91a 5%, #ffda2a 100%);
 }
 
-
 /* Responsive pour navigateur PC */
 @media screen and (max-width: 600px) {
+
+    .cacheItem{
+        display: none;
+    }
+
+    .logo{
+        width: auto;
+        height: auto;
+    }
+
+    .nav-tabs{
+        background: rgb(51,51,51);
+        background: radial-gradient(circle, rgb(37, 26, 26) 1%, rgb(6, 5, 5) 99%);
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 100%;
+        display: flex;
+        height: 85px;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    #logoBadRecords{
+        width: 85px;
+        cursor: pointer;
+    }
+
     .buttonZone{
         width: 20px;
         height: 220px;
@@ -284,9 +316,6 @@ Button:active {
         background-size: cover;
     }
 
-    .logoBadRecords{
-        display: none;
-    }
 }
 
 /* RESPONSIVE Pour téléphone */
