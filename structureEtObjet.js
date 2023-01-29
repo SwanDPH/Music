@@ -5,7 +5,13 @@
     const media1 = window.matchMedia("(max-width: 1000px)");
     const media2 = window.matchMedia("(max-min: 1000px)");
     const titre = document.querySelector("p");
+    const navBarResponsive = document.querySelector('.menuResponsiveNone')
+    const logoMrBaad = document.querySelector('.logo')
     
+    logoMrBaad.addEventListener("click", () => {
+            navBarResponsive.classList.toggle('menuResponsive');
+        }
+    );
 
 //         // gestion du responsive en JS
 // window.onload = function(){
@@ -16,7 +22,6 @@
 //         titre.style.color = "yellow";
 //     }
 // }
-
 
     // création de la structure "musique" (le squelette des objets)
 function musique (titre, artiste, annee, genre, temps, cover, mp3, favorite, purchase){
@@ -50,39 +55,82 @@ let musiquesPurchaseTableau=[]
 // Ici ⬇⬇⬇ nous mettons les musiques créé dans notre tableau vide du dessus
 musiquesTableau.push(musique1, musique2, musique3,musique4, musique5, musique6, musique7)
 
+var texteAffiché = "MDN";
+var URL = "https://developer.mozilla.org/";
+var listeee = document.querySelector('.table')
+
 function musiqueList(){
+    if (click === true) {
+        console.log("haha");
+    } else {
+        musiquesTableau.forEach(Music =>
+            ListOfMusic +=
+            `<section>
+                        <table class="table">
+                                <tr class="d-flex align-items-center ligneMusique">
+                                    <th scope="row" style="padding: 30px; border:0px"><img src="${Music.cover}" alt=""></th>
+                                    <td style="padding: 30px; border:0px"><img id="playButton1" src="Images/Icone/play.png" onclick="buttonPlayFunc()" alt=""></td>
+                                    <td style="padding: 30px; border:0px"><p id="titreMusique">${Music.titre}<em id="artisteMusique"><br>${Music.artiste}</em></p></td>
+                                    <td style="padding: 30px; border:0px"><p class="genre">${Music.genre}</p></td>
+                                    <td style="padding: 30px; border:0px"><p class="time">${Music.temps}</p></td>
+    
+                                    <td style="padding: 30px; border:0px">
+                                        <span class="css-button-icon">
+                                            <i class="fa fa-cart-arrow-down" style="font-size:30px" onMouseOver="$(this).css('color', '#b6afaf');" onmouseout="$(this).css('color', '#e0dede');" ondblclick="$(this).css('color', '#6efc7b');"></i>
+                                        </span>
+                                    </td>
+    
+    
+                                    <td style="padding: 30px; border:0px">
+                                        <span class="css-button-icon">
+                                            <i  class="fa fa-download" style="font-size:30px;" onMouseOver="$(this).css('color', '#b6afaf');" onmouseout="$(this).css('color', '#e0dede');" ondblclick="$(this).css('color', '#6efc7b');"></i>
+                                        </span>
+                                    </td>
+                                        
+                                        </tr>
+                    </table>
+            </section>`
+                    )
+        document.getElementById('IDElementHtmlTest').innerHTML = ListOfMusic
+        document.getElementById("listeMusique").style.display = "block";
+    }
+    
     click = true;
-    musiquesTableau.forEach(Music =>
-        ListOfMusic +=
-        `<section>
-                    <table class="table">
-                            <tr class="d-flex align-items-center ligneMusique">
-                                <th scope="row" style="padding: 30px; border:0px"><img src="${Music.cover}" alt=""></th>
-                                <td style="padding: 30px; border:0px"><img id="playButton1" src="Images/Icone/play.png" onclick="buttonPlayFunc()" alt=""></td>
-                                <td style="padding: 30px; border:0px"><p id="titreMusique">${Music.titre}<em id="artisteMusique"><br>${Music.artiste}</em></p></td>
-                                <td style="padding: 30px; border:0px"><p class="genre">${Music.genre}</p></td>
-                                <td style="padding: 30px; border:0px"><p class="time">${Music.temps}</p></td>
-
-                                <td style="padding: 30px; border:0px">
-                                    <span class="css-button-icon">
-                                        <i class="fa fa-cart-arrow-down" style="font-size:30px" onMouseOver="$(this).css('color', '#b6afaf');" onmouseout="$(this).css('color', '#e0dede');" ondblclick="$(this).css('color', '#6efc7b');"></i>
-                                    </span>
-                                </td>
-
-
-                                <td style="padding: 30px; border:0px">
-                                    <span class="css-button-icon">
-                                        <i  class="fa fa-download" style="font-size:30px;" onMouseOver="$(this).css('color', '#b6afaf');" onmouseout="$(this).css('color', '#e0dede');" ondblclick="$(this).css('color', '#6efc7b');"></i>
-                                    </span>
-                                </td>
-                                    
-                                    </tr>
-                </table>
-        </section>`
-                )
-    document.getElementById('IDElementHtmlTest').innerHTML = ListOfMusic
-    document.getElementById("listeMusique").style.display = "block";
 }
+// function musiqueList(){
+
+//     musiquesTableau.forEach(Music =>
+//         ListOfMusic +=
+//         `<section>
+//                     <table class="table">
+//                             <tr class="d-flex align-items-center ligneMusique">
+//                                 <th scope="row" style="padding: 30px; border:0px"><img src="${Music.cover}" alt=""></th>
+//                                 <td style="padding: 30px; border:0px"><img id="playButton1" src="Images/Icone/play.png" onclick="buttonPlayFunc()" alt=""></td>
+//                                 <td style="padding: 30px; border:0px"><p id="titreMusique">${Music.titre}<em id="artisteMusique"><br>${Music.artiste}</em></p></td>
+//                                 <td style="padding: 30px; border:0px"><p class="genre">${Music.genre}</p></td>
+//                                 <td style="padding: 30px; border:0px"><p class="time">${Music.temps}</p></td>
+
+//                                 <td style="padding: 30px; border:0px">
+//                                     <span class="css-button-icon">
+//                                         <i class="fa fa-cart-arrow-down" style="font-size:30px" onMouseOver="$(this).css('color', '#b6afaf');" onmouseout="$(this).css('color', '#e0dede');" ondblclick="$(this).css('color', '#6efc7b');"></i>
+//                                     </span>
+//                                 </td>
+
+
+//                                 <td style="padding: 30px; border:0px">
+//                                     <span class="css-button-icon">
+//                                         <i  class="fa fa-download" style="font-size:30px;" onMouseOver="$(this).css('color', '#b6afaf');" onmouseout="$(this).css('color', '#e0dede');" ondblclick="$(this).css('color', '#6efc7b');"></i>
+//                                     </span>
+//                                 </td>
+                                    
+//                                     </tr>
+//                 </table>
+//         </section>`
+//                 )
+//     document.getElementById('IDElementHtmlTest').innerHTML = ListOfMusic
+//     document.getElementById("listeMusique").style.display = "block";
+//     click = true;
+// }
 
 function isFavorite(){
     var favoriteMusiquee = true;

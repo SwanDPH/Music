@@ -71,6 +71,56 @@ A{
 }
 
 
+.menuResponsiveNone{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.menuResponsive{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+.menuResponsive li{
+    list-style-type: none;
+    font-size: 31px;
+    display: flex;
+    width: 100%;
+    height: 80%;
+    color: white;
+    background: rgb(28,28,28);
+    background: linear-gradient(0deg, rgba(28,28,28,1) 1%, rgba(27,22,22,1) 100%, rgba(11,11,11,1) 100%);
+    border-bottom: 1px white solid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+.menuResponsive li:hover{
+    cursor: pointer;
+    height: 100%;
+    color: white;
+    border-bottom: 1px white solid;
+    background: linear-gradient(0deg, rgba(11,11,11,1) 100%, rgba(27,22,22,1) 100%, rgba(28,28,28,1) 1%);
+}
+
+.menuResponsive a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.menuResponsive a:hover{
+    text-decoration: none;
+    color: gold;
+}
+
 @font-face {
     font-family: "EastBorder";
     src: url(Polices/EastBorder.ttf) format("truetype");
@@ -258,6 +308,23 @@ Button:active {
 /* Responsive pour navigateur PC */
 @media screen and (max-width: 600px) {
 
+    .menuResponsiveNone{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .menuResponsive{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90%;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
     .cacheItem{
         display: none;
     }
@@ -324,6 +391,40 @@ Button:active {
 
 /* RESPONSIVE Pour téléphone */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .menuResponsiveNone{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .menuResponsive{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    
+    .menuResponsive li{
+    list-style-type: none;
+    font-size: 65px;
+    display: flex;
+    width: 100%;
+    height: 80%;
+    color: white;
+    background: rgb(28,28,28);
+    background: linear-gradient(0deg, rgba(28,28,28,1) 1%, rgba(27,22,22,1) 100%, rgba(11,11,11,1) 100%);
+    border-bottom: 1px white solid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+    
     .cacheItem{
         display: none;
     }
@@ -340,14 +441,14 @@ Button:active {
         padding-bottom: 8px;
         width: 100%;
         display: flex;
-        height: 85px;
+        height: 10%;
         justify-content: center;
         align-items: center;
     }
 
 
     #logoBadRecords{
-        width: 85px;
+        width: 75%;
         cursor: pointer;
     }
     
