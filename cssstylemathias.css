@@ -385,7 +385,19 @@ Button:active {
         background-repeat:repeat;
     }
 
+    
+
 }
+
+
+@media screen and (max-width: 898px) {
+.ligneMusique{
+    display: flex;
+    flex-direction: column;
+    border-top: #514f4f 0.01em solid;
+}
+}
+
 
 /* RESPONSIVE Pour téléphone */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -490,14 +502,20 @@ Button:active {
         font-style: normal;
     }
 
+    .ligneMusique{
+        display: flex;
+        flex-direction: column;
+        border-top: #514f4f 3px solid;
+    }
+
     .firstSection{
         height: 100%;
         width: 100%;
         background-image: url(Images/Image_1accueil.png);
-        background-position: -1566px;
+        background-position: -1206px;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position-y: -350px;
+        background-position-y: -129px;
     }
 
     .logoBadRecords{
