@@ -53,6 +53,7 @@ audio{
     background-image: url(Images/Image_1accueil.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: -48px;
 }
 
 .texteAccueil{
@@ -227,8 +228,6 @@ Button:active {
     color: #aaa9a9;
     vertical-align: top;
 }
-.genre1{
-}
 
 .time{
     font-size: 18px;
@@ -382,9 +381,8 @@ Button:active {
         height: 100%;
         width: 100%;
         background-image: url(Images/Image_1accueil.png);
-        background-position: -185px;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-position: 2765px;
+        background-repeat:repeat;
     }
 
 }
@@ -496,9 +494,10 @@ Button:active {
         height: 100%;
         width: 100%;
         background-image: url(Images/Image_1accueil.png);
-        background-position: -185px;
+        background-position: -1566px;
         background-repeat: no-repeat;
         background-size: cover;
+        background-position-y: -350px;
     }
 
     .logoBadRecords{
@@ -507,5 +506,20 @@ Button:active {
 .playButton1{
     border:solid 5px red;
 }
+
+    }
+
+
+
+    @media screen and (max-width: 1180) {
+    .firstSection{
+        height: 100%;
+        width: 100%;
+        /* background-image: url(Images/Image_1accueil.png); */
+        background-color: red;
+        background-position-y: -1124px;
+        background-repeat: no-repeat;
+    }
+
 
     }
