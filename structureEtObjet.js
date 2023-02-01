@@ -38,13 +38,13 @@ function musique (titre, artiste, annee, genre, temps, cover, mp3, favorite, pur
 // --- fin de la création de la structure "musique" (le squelette des objets)
 
 // création des objets musique par rapport à la structure créé précédement
-var musique1 = new musique ("Ghetto'Land","Landy",2022,"Rap/Cité","2:22","Images/cover/Musique0.png","Musiques/Musique0.mp3", false, false)
-var musique2 = new musique ("Madinina","Yeahman'C",2002,"Doux","1:30","Images/cover/Musique1.png","Musiques/Musique0.mp3",false, false)
-var musique3 = new musique ("Guyana","Flexi",1998,"Rap","1:30","Images/cover/Musique2.png","Musiques/Musique0.mp3",false, false)
-var musique4 = new musique ("Chaud","Savage Hooli",2000,"Doux","1:30","Images/cover/Musique0.png","Musiques/Musique0.mp3",false, false)
-var musique5 = new musique ("Street Life","Gang'shit",2000,"Doux","1:30","Images/cover/Musique1.png","Musiques/Musique0.mp3",false, false)
-var musique6 = new musique ("Shatta'ting","Paille",2000,"Doux","1:30","Images/cover/Musique2.png","Musiques/Musique0.mp3",false, false)
-var musique7 = new musique ("Gwada","Kery James",2000,"Doux","1:30","Images/cover/Musique0.png","Musiques/Musique0.mp3",false, false)
+var musique1 = new musique ("Ghetto'Land","Landy",2022,"Rap/Cité","2:22","./Images/cover/Musique0.png","Musiques/Musique0.mp3", false, false)
+var musique2 = new musique ("Madinina","Yeahman'C",2002,"Doux","1:30","./Images/cover/Musique1.png","Musiques/Musique0.mp3",false, false)
+var musique3 = new musique ("Guyana","Flexi",1998,"Rap","1:30","./Images/cover/Musique2.png","Musiques/Musique0.mp3",false, false)
+var musique4 = new musique ("Chaud","Savage Hooli",2000,"Doux","1:30","./Images/cover/Musique0.png","Musiques/Musique0.mp3",false, false)
+var musique5 = new musique ("Street Life","Gang'shit",2000,"Doux","1:30","./Images/cover/Musique1.png","Musiques/Musique0.mp3",false, false)
+var musique6 = new musique ("Shatta'ting","Paille",2000,"Doux","1:30","./Images/cover/Musique2.png","Musiques/Musique0.mp3",false, false)
+var musique7 = new musique ("Gwada","Kery James",2000,"Doux","1:30","./Images/cover/Musique0.png","Musiques/Musique0.mp3",false, false)
 // --- fin de la création des objets musique
 
 // création du tableau qui viendra accueillir nos musiques
