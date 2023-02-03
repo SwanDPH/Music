@@ -66,15 +66,86 @@
 
 
 <section id="listeMusique">
-    <div id="IDElementHtmlTest"></div>
+    <div id="IDElementHtmlTest" style="border: solid 0.5px black;"></div>
 </section>
 
 </body>
 
-
 <footer>
+  <ul class="ulFooter" style="border:0px" class="nav nav-tabs" style="flex-wrap: nowrap;">
+    
+        <p href="https://www.youtube.com">Nous contacter</p>
+        <p href="#">FAQ</p>
 
+        <a href="https://www.instagram.com/mrbaad_p/?hl=fr">
+          <img id="logoInstagram" src="Images/Icone/Instagram.png">
+        </a>
+
+        <a href="https://www.instagram.com/mrbaad_p/?hl=fr">
+          <img id="logoYoutube" src="Images/Icone/Youtube.png">
+        </a>
+      </ul>
 </footer>
+
+  <div class="formulaireInput">
+        <p>Nous contacter :</p>
+
+        <div>
+            <img src="Images/Icon_Contact_page/firstname.png" alt="">
+            <input type="text" id="firstName" placeholder="Prénom">
+        </div>
+        <div>
+            <img src="Images/Icon_Contact_page/Name.png" alt="">
+            <input type="text" id="name" placeholder="Nom">
+        </div>
+
+        <div>
+            <img src="Images/Icon_Contact_page/age.png" alt="">
+            <input type="number" id="age" placeholder="Age">
+        </div>
+
+        <div>
+            <img src="Images/Icon_Contact_page/email.png" alt="">
+            <input type="email" id="email" placeholder="E-mail">
+        </div>
+        <div>
+            <p>Donut(s) concerné(s) :</p>
+        </div>
+        <div class="ChoixDonut">
+            <div>
+                <p>Donut Caramel</p>
+                <input type="number" id="Donut1" placeholder="Quantité" aria-label="donut1">
+            </div>
+
+            <div>
+                <p>Donut Saumon</p>
+                <input type="number" id="Donut2" placeholder="Quantité">
+            </div>
+
+            <div>
+                <p>Donut Sucre</p>
+                <input type="number" id="Donut3" placeholder="Quantité">
+            </div>
+
+            <div>
+                <p>Donut Bambou</p>
+                <input type="number" id="Donut4" placeholder="Quantité">
+            </div>
+        </div>
+
+        <div>
+            <img src="/src/Images/Icon_Contact_page/description.png" alt="">
+            <input type="text" id="description" minlength="10" maxlength="158" placeholder="Yb avus">
+        </div>
+
+        <div class="boutton">
+            <button type="submit">
+                Envoyer
+            </button>
+        </div>
+    </div>
+</div>
+
 
 <script src="structureEtObjet.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
