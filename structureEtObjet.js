@@ -101,18 +101,18 @@ function contactMoi(){
     contactMe =
             `<div class="formulaireInput">
             <p>Nous contacter :</p>
-
+          
             <div>
-                <img src="Images/Icon_Contact_page/firstname.png" alt="">
+                <img src="Images/Icone/Icon_Contact_page/firstname.png" alt="">
                 <input type="text" id="firstName" placeholder="Prénom">
             </div>
             <div>
-                <img src="Images/Icon_Contact_page/Name.png" alt="">
+                <img src="Images/Icone/Icon_Contact_page/Name.png" alt="">
                 <input type="text" id="name" placeholder="Nom">
             </div>
-
+          
             <div>
-                <img src="Images/Icon_Contact_page/email.png" alt="">
+                <img src="Images/Icone/Icon_Contact_page/email.png" alt="">
                 <input type="email" id="email" placeholder="E-mail">
             </div>
             <div>
@@ -123,29 +123,44 @@ function contactMoi(){
                     <p>Instrumental</p>
                     <input type="checkbox" id="Donut1" placeholder="Quantité" aria-label="donut1">
                 </div>
-
+          
                 <div>
                     <p>Photos/Vidéos</p>
                     <input type="checkbox" id="Donut2" placeholder="Quantité">
                 </div>
-
+          
             </div>
-
-            <div>
-                <img src="/src/Images/Icon_Contact_page/description.png" alt="">
-                <input type="text" id="description" minlength="10" maxlength="158" placeholder="Descritpion de ta demande">
-            </div>
-
+          
+                        <div>
+                            <img src="Images/Icone/Icon_Contact_page/description.png" alt="">
+                            <input type="text" id="description" minlength="10" maxlength="158" placeholder="Descritpion de ta demande">
+                        </div>
+          
                         <div class="boutton">
-                            <button type="submit">
-                                Envoyer
+                            <button type="submit" onclick= "fermetureZoneMessage()" id="buttonEnvoyéOff">
+                                <p id="messageEnvoyee">
+                                    <p id="envoyerParagraphe">Envoyer</p>
+                                </p>
                             </button>
                         </div>
           </div>`
         document.getElementById('emplacementPartieContact').innerHTML = contactMe
-        document.getElementById("contactMoi").style.display = "block";
-   
+        document.getElementById("contactMoiZone").style.display = "block"
+        document.getElementById("buttonEnvoyéOff").id = "buttonEnvoyéOn";
 }
+
+
+function fermetureZoneMessage() {
+    contactMe =
+    `<p>Message envoyé</p>`
+
+
+    messageEnvoye = 
+        alert("Message envoyé !")
+        document.getElementById('messageEnvoyee').innerHTML = contactMe
+        document.getElementById("envoyerParagraphe").style.display = "none";
+}
+
 
 function isFavorite(){
     var favoriteMusiquee = true;

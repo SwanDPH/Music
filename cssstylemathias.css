@@ -160,6 +160,8 @@ button a{
 	text-shadow:0px 1px 0px #171406;
   }
 
+  /* style du bouton jaune */
+  
 Button {
     width: 210px;
     height: 80px;
@@ -168,6 +170,42 @@ Button {
 	border-radius:50px;
 	border:1px solid #ffaa22;
 	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+#buttonEnvoyéOff {
+    width: 210px;
+    height: 60px;
+	box-shadow:inset 0px 1px 0px 0px #fff6af;
+    background:linear-gradient(to bottom, #ffda2a 5%, #dbb91a 100%);
+	border-radius:50px;
+    border:1px solid #ffaa22;
+	display:flex;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+.buttonEnvoyéOn {
+    width: 210px;
+    height: 60px;
+	box-shadow:inset 0px 1px 0px 0px #fff6af;
+    /* background:linear-gradient(to bottom, #ffda2a 5%, #dbb91a 100%); */
+	background:linear-gradient(to bottom, #2aff55 5%, #3adb1a 100%);
+	border-radius:50px;
+    /* border:1px solid #ffaa22; */
+	border:1px solid #22ff98;
+	display:flex;
 	cursor:pointer;
 	color:#333333;
 	font-family:Arial;
@@ -386,6 +424,7 @@ a>img:hover{
   }
   
   .ChoixDonut {
+    border: red solid 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -399,7 +438,7 @@ a>img:hover{
   }
   .ChoixDonut input {
     width: 10rem;
-    height: 4rem;
+    height: 3rem;
   }
   .ChoixDonut div {
     flex: 1 1 2rem;
