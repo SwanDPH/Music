@@ -345,7 +345,8 @@ a>img:hover{
 .formulaireInput {
     display: flex;
     flex-direction: column;
-    background-color: #f25278;
+    background: rgb(63,63,63);
+    background: linear-gradient(0deg, rgba(63,63,63,1) 1%, rgba(43,43,43,1) 100%);;
     width: 100%;
     height: 120%;
     flex-wrap: wrap;
@@ -404,4 +405,8 @@ a>img:hover{
     flex: 1 1 2rem;
     display: flex;
     flex-direction: column;
+  }
+
+  #contactMoi{
+    display: none;
   }

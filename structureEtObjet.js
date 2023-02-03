@@ -97,6 +97,55 @@ function musiqueList(){
     
     click = true;
 }
+function contactMoi(){
+    contactMe =
+            `<div class="formulaireInput">
+            <p>Nous contacter :</p>
+
+            <div>
+                <img src="Images/Icon_Contact_page/firstname.png" alt="">
+                <input type="text" id="firstName" placeholder="Prénom">
+            </div>
+            <div>
+                <img src="Images/Icon_Contact_page/Name.png" alt="">
+                <input type="text" id="name" placeholder="Nom">
+            </div>
+
+            <div>
+                <img src="Images/Icon_Contact_page/email.png" alt="">
+                <input type="email" id="email" placeholder="E-mail">
+            </div>
+            <div>
+                <p>Produit(s) concerné(s) :</p>
+            </div>
+            <div class="ChoixDonut">
+                <div>
+                    <p>Instrumental</p>
+                    <input type="checkbox" id="Donut1" placeholder="Quantité" aria-label="donut1">
+                </div>
+
+                <div>
+                    <p>Photos/Vidéos</p>
+                    <input type="checkbox" id="Donut2" placeholder="Quantité">
+                </div>
+
+            </div>
+
+            <div>
+                <img src="/src/Images/Icon_Contact_page/description.png" alt="">
+                <input type="text" id="description" minlength="10" maxlength="158" placeholder="Descritpion de ta demande">
+            </div>
+
+                        <div class="boutton">
+                            <button type="submit">
+                                Envoyer
+                            </button>
+                        </div>
+          </div>`
+        document.getElementById('emplacementPartieContact').innerHTML = contactMe
+        document.getElementById("contactMoi").style.display = "block";
+   
+}
 
 function isFavorite(){
     var favoriteMusiquee = true;
