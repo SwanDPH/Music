@@ -2,6 +2,20 @@
     scroll-behavior: smooth;
 }
 
+.testAudio{
+    flex-direction: row;
+    font-size: 55px;
+    height: 100%;
+}
+
+audio{
+    position: absolute;
+}
+
+#musicTest{
+    background-color: red;
+}
+
 html{
     background-color: #161616;
     width: 100%;
@@ -36,10 +50,6 @@ p{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #f2f2f2;
     transition: all 0.2s;
-}
-
-audio{
-    display: none;
 }
 
 .container {
@@ -120,6 +130,10 @@ A{
 .menuResponsive a:hover{
     text-decoration: none;
     color: gold;
+}
+
+.mp3Musique{
+    display: none;
 }
 
 @font-face {
@@ -247,11 +261,11 @@ Button:active {
 }
 
 
-#playButton1{
+.playButton1{
     width: 60px;
     height: 60px;
 }
-#playButton1:hover{
+.playButton1:hover{
    cursor: pointer;
    width: 55px;
     height: 55px;

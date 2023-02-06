@@ -5,9 +5,9 @@
     const media1 = window.matchMedia("(max-width: 1000px)");
     const media2 = window.matchMedia("(max-min: 1000px)");
     const titre = document.querySelector("p");
-    const navBarResponsive = document.querySelector('.menuResponsiveNone')
-    const logoMrBaad = document.querySelector('.logo')
-    
+    const navBarResponsive = document.querySelector('.menuResponsiveNone');
+    const logoMrBaad = document.querySelector('.logo');
+
     logoMrBaad.addEventListener("click", () => {
             navBarResponsive.classList.toggle('menuResponsive');
         }
@@ -38,13 +38,13 @@ function musique (titre, artiste, annee, genre, temps, cover, mp3, favorite, pur
 // --- fin de la création de la structure "musique" (le squelette des objets)
 
 // création des objets musique par rapport à la structure créé précédement
-var musique1 = new musique ("Ghetto'Land","Landy",2022,"Rap/Cité","2:22","./Images/cover/Musique0.png","Musiques/Musique0.mp3", false, false)
-var musique2 = new musique ("Madinina","Yeahman'C",2002,"Doux","1:30","./Images/cover/Musique1.png","Musiques/Musique0.mp3",false, false)
-var musique3 = new musique ("Guyana","Flexi",1998,"Rap","1:30","./Images/cover/Musique2.png","Musiques/Musique0.mp3",false, false)
-var musique4 = new musique ("Chaud","Savage Hooli",2000,"Doux","1:30","./Images/cover/Musique0.png","Musiques/Musique0.mp3",false, false)
-var musique5 = new musique ("Street Life","Gang'shit",2000,"Doux","1:30","./Images/cover/Musique1.png","Musiques/Musique0.mp3",false, false)
-var musique6 = new musique ("Shatta'ting","Paille",2000,"Doux","1:30","./Images/cover/Musique2.png","Musiques/Musique0.mp3",false, false)
-var musique7 = new musique ("Gwada","Kery James",2000,"Doux","1:30","./Images/cover/Musique0.png","Musiques/Musique0.mp3",false, false)
+var musique1 = new musique ("Ghetto'Land","Landy",2022,"Rap/Cité","2:22","./Images/cover/Musique0.png","Musiques/Musique1.mp3", false, false)
+var musique2 = new musique ("Madinina","Yeahman'C",2002,"Doux","1:30","./Images/cover/Musique1.png","Musiques/Musique2.mp3",false, false)
+var musique3 = new musique ("Guyana","Flexi",1998,"Rap","1:30","./Images/cover/Musique2.png","Musiques/Musique3.mp3",false, false)
+var musique4 = new musique ("Chaud","Savage Hooli",2000,"Doux","1:30","./Images/cover/Musique0.png","Musiques/Musique1.mp3",false, false)
+var musique5 = new musique ("Street Life","Gang'shit",2000,"Doux","1:30","./Images/cover/Musique1.png","Musiques/Musique2.mp3",false, false)
+var musique6 = new musique ("Shatta'ting","Paille",2000,"Doux","1:30","./Images/cover/Musique2.png","Musiques/Musique3.mp3",false, false)
+var musique7 = new musique ("Gwada","Kery James",2000,"Doux","1:30","./Images/cover/Musique0.png","Musiques/Musique1.mp3",false, false)
 // --- fin de la création des objets musique
 
 // création du tableau qui viendra accueillir nos musiques
@@ -55,8 +55,6 @@ let musiquesPurchaseTableau=[]
 // Ici ⬇⬇⬇ nous mettons les musiques créé dans notre tableau vide du dessus
 musiquesTableau.push(musique1, musique2, musique3,musique4, musique5, musique6, musique7)
 
-var texteAffiché = "MDN";
-var URL = "https://developer.mozilla.org/";
 var listeee = document.querySelector('.table')
 
 function musiqueList(){
@@ -69,10 +67,14 @@ function musiqueList(){
                         <table class="table">
                                 <tr class="d-flex align-items-center ligneMusique">
                                     <th scope="row" style="padding: 30px; border:0px"><img src="${Music.cover}" alt=""></th>
-                                    <td style="padding: 30px; border:0px"><img id="playButton1" src="Images/Icone/play.png" onclick="buttonPlayFunc()" alt=""></td>
+                                    <td style="padding: 30px; border:0px"><img class="playButton1" src="Images/Icone/play.png"  onclick="playMusic()" alt=""></td>
                                     <td style="padding: 30px; border:0px"><p id="titreMusique">${Music.titre}<em id="artisteMusique"><br>${Music.artiste}</em></p></td>
                                     <td style="padding: 30px; border:0px"><p class="genre">${Music.genre}</p></td>
                                     <td style="padding: 30px; border:0px"><p class="time">${Music.temps}</p></td>
+                                    
+                                    <audio class="musicTest">
+                                    <source id="sourceMusique" src="${Music.mp3}" type="audio/mpeg">
+                                    </audio>
     
                                     <td style="padding: 30px; border:0px">
                                         <span class="css-button-icon">
@@ -90,13 +92,35 @@ function musiqueList(){
                                         </tr>
                     </table>
             </section>`
-                    )
+           
+            
+            )
         document.getElementById('IDElementHtmlTest').innerHTML = ListOfMusic
-        document.getElementById("listeMusique").style.display = "block";
+        document.getElementById("listeMusique").style.display = "block"
     }
-    
     click = true;
 }
+
+
+const btnPlay = document.querySelector('.playButton1');
+
+// Problématique ici : "maMusic" sélectionne l'ID et non la class (voir InnerHTML ci-dessus), la solution ne viendrait-elle pas de la ?
+var maMusic = document.querySelector('#musicTest');
+
+console.log(musique1.artiste + " - " + musique1.mp3);
+
+function playMusic(){
+    if (maMusic.paused) {
+            maMusic.play()
+            // sourceMusique.src
+            // btnPlay.src = "Images/Icone/pause.png"
+    } else{
+            maMusic.paused()
+            // btnPlay.src = "Images/Icone/play.png"
+    }
+    }
+
+
 function contactMoi(){
     contactMe =
             `<div class="formulaireInput">
@@ -146,7 +170,7 @@ function contactMoi(){
           </div>`
         document.getElementById('emplacementPartieContact').innerHTML = contactMe
         document.getElementById("contactMoiZone").style.display = "block"
-        document.getElementById("buttonEnvoyéOff").id = "buttonEnvoyéOn";
+        document.getElementById("buttonEnvoyéOff").id = "buttonEnvoyéOn"
 }
 
 
@@ -199,4 +223,3 @@ function isNoFavorite(){
 //     console.log("wopwopwop");
 //     document.getElementsByClassName("navText").innerHTML = "555px";
 // }
-
