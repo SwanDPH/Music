@@ -103,17 +103,16 @@ function musiqueList(){
 
 
 const btnPlay = document.querySelector('.playButton1');
-
 // Problématique ici : "maMusic" sélectionne l'ID et non la class (voir InnerHTML ci-dessus), la solution ne viendrait-elle pas de la ?
 var maMusic = document.querySelector('#musicTest');
-
 console.log(musique1.artiste + " - " + musique1.mp3);
 
 function playMusic(){
+    maMusic = document.querySelector('.musicTest')
     if (maMusic.paused) {
-            maMusic.play()
-            // sourceMusique.src
+            // maMusic.src = "Musiques/Musique3.mp3"
             // btnPlay.src = "Images/Icone/pause.png"
+            maMusic.play()
     } else{
             maMusic.paused()
             // btnPlay.src = "Images/Icone/play.png"
